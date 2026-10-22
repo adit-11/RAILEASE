@@ -197,7 +197,12 @@ export default function BookingFlowPage() {
 
       showToast('Booking confirmed! Redirecting to E-Ticket...', 'success');
       setTimeout(() => {
-        navigate(`/ticket/${res.booking.pnr}`);
+        const confirmedPnr = res?.booking?.pnr || res?.pnr;
+        if (confirmedPnr) {
+          navigate(`/ticket/${confirmedPnr}`);
+        } else {
+          navigate('/my-bookings');
+        }
       }, 1000);
 
     } catch (err) {

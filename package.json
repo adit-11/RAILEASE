@@ -1,0 +1,22 @@
+{
+  "name": "railease-railway-reservation",
+  "version": "1.0.0",
+  "description": "RailEase — Smart Railway Reservation System for Indian Railways",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node start-all.js",
+    "build": "npm --prefix client run build",
+    "server": "cd server && node index.js",
+    "client": "cd client && npm run dev"
+  },
+  "keywords": [
+    "railway",
+    "irctc",
+    "reservation-system",
+    "full-stack",
+    "btech-project"
+  ],
+  "author": "RailEase Engineering Team",
+  "license": "ISC"
+}

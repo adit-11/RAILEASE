@@ -1,0 +1,23 @@
+# Dependency directories
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# SQLite WAL and temp files
+server/*.db-shm
+server/*.db-wal
+
+# Environment files
+.env
+.env.local
+client/.env
+client/.env.local
+server/.env
+
+# Logs
+*.log
+logs/
+
+# OS files
+.DS_Store
+Thumbs.db

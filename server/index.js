@@ -843,6 +843,16 @@ app.get('/api/admin/users', authenticateToken, requireAdmin, (req, res) => {
   }
 });
 
+// Health check
+app.get('/api/health', (req, res) => {
+  res.json({
+    status: 'OK',
+    system: 'RailEase Indian Railway Reservation API',
+    version: '1.0.0',
+    timestamp: new Date().toISOString()
+  });
+});
+
 // Serve React frontend (Production / Unified Single-App mode)
 const path = require('path');
 const fs = require('fs');

@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server/index.js",
     "dev": "node start-all.js",
-    "build": "npm --prefix client run build",
+    "build": "npm --prefix client install --include=dev && npm --prefix client run build && npm --prefix server install",
     "server": "cd server && node index.js",
     "client": "cd client && npm run dev"
   },
